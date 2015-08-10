@@ -1,0 +1,21 @@
+<md-dialog aria-label="Mango">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Enter your chat username</h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-input-container>
+                <label>Username Please!</label>
+                <input ng-model="username" type="text">
+            </md-input-container>
+        </md-dialog-content>
+        <div class="md-actions" layout="row">
+            <md-button ng-click="answer(username)" class="md-primary" ng-disabled="!username">
+                Ok
+            </md-button>
+        </div>
+    </form>
+</md-dialog>

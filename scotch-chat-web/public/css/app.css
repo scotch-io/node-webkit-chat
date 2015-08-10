@@ -1,0 +1,25 @@
+body {
+    background: #fafafa !important;
+}
+
+.select-header .md-select-label.md-placeholder {
+    color: #fff
+}
+
+.footer {
+    background: #fff;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.message.ng-enter {
+    -webkit-animation: zoomIn 1s;
+    -ms-animation: zoomIn 1s;
+    animation: zoomIn 1s;
+}
+
+md-select .md-select-label.md-placeholder{
+color: #fff;
+}

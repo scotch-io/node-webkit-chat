@@ -1,0 +1,33 @@
+{
+    "name": "scotch-chat",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./app/index.html",
+    "dependencies": {
+        "body-parser": "~1.0.0",
+        "cookie-parser": "~1.0.1",
+        "debug": "~0.7.4",
+        "ejs": "~0.8.5",
+        "express": "^4.x.x"
+    },
+    "devDependencies": {
+        "gulp": "^3.8.7",
+        "gulp-shell": "^0.2.9",
+        "node-webkit-builder": "^1.0.8",
+        "nw-builder": "latest"
+    },
+    "window": {
+        "title": "Scotch Chat",
+        "toolbar": false,
+        "frame": true,
+        "position": "center",
+        "fullscreen": false,
+        "resizable": false,
+        "width": 400,
+        "height": 700,
+        "min_width": 600,
+        "min_height": 400,
+         "icon": "app/public/img/scotch.png"
+    },
+    "node-remote": "<local>"
+}

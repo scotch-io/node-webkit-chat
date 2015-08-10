@@ -1,0 +1,15 @@
+{
+    "name": "scotch-chat",
+    "main": "index.js",
+    "dependencies": {
+        "mongoose": "latest",
+        "morgan": "latest",
+        "socket.io": "latest"
+    },
+    "engines": {
+    "node": "0.12.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

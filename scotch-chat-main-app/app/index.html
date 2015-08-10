@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- loading animation :: Used as a splash screen-->
+    <!-- https://gist.github.com/domsammut/4605377 -->
+    <style type="text/css">
+    html {
+        background: #333333;
+    }
+    body {
+        width: 100%;
+        height: 100%q;
+        margin: 0;
+        padding: 0;
+    }
+    @-webkit-keyframes rotate-loading {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    @-webkit-keyframes loading-text-opacity {
+        0% {
+            opacity: 0
+        }
+        20% {
+            opacity: 0
+        }
+        50% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    .loading-container,
+    .loading {
+        height: 199px;
+        position: relative;
+        width: 199px;
+        border-radius: 100%;
+    }
+    .loading-container {
+        margin: 80px auto;
+    }
+    .loading {
+        border: 2px solid transparent;
+        border-color: transparent #aaa transparent #aaa;
+        -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+        -webkit-transform-origin: 50% 50%;
+    }
+    .loading-container .loading {
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+    #loading-text {
+        -webkit-animation: loading-text-opacity 1.5s linear 0s infinite normal;
+        color: #ccc;
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-weight: bold;
+        margin-top: 72px;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        width: 188px;
+        font-size: 23px;
+    }
+    h1 {
+        text-align: center;
+        color: #eee;
+    }
+    </style>
+    <script>
+    function init() {
+        require('./app.js');
+        setTimeout(function() {
+            window.location.assign('http://localhost:3000');
+        }, 2999);
+    }
+    </script>
+</head>
+
+<body onload="init()">
+    <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-text">
+            <img src="public/img/scotch.png" alt="">
+        </div>
+    </div>
+    <h1>Serving Scotch. . .</h1>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    <script src="/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:2015');
+        socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', {
+                my: 'data'
+            });
+        });
+    </script>
+<h1>Scotch chat server is up and running</h1>
+</body>
+
+</html>
